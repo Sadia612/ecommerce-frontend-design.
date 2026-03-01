@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Dresses for Men</title>
+    <link rel="stylesheet" href="style8.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header class="detail-header">
+            <i class="fas fa-arrow-left" onclick="history.back()"></i>
+            <div class="nav-right">
+                <i class="fas fa-shopping-cart" onclick="location.href='pg9.html'"></i>
+                <i class="fas fa-user"></i>
+            </div>
+        </header>
+
+        <div class="product-gallery">
+            <img src="assests\shirt.jpg" alt="Main Product" id="main-img">
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <div class="product-content">
+            <div class="rating-row">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="rating-val">4.5</span>
+                </div>
+                <span class="stat-item"><i class="fas fa-comment-alt"></i> 32 reviews</span>
+                <span class="stat-item"><i class="fas fa-shopping-basket"></i> 154 sold</span>
+            </div>
+
+            <h1 class="product-title">Premium Dresses for men - Casual Summer Collection</h1>
+            
+            <div class="price-box">
+                <span class="current-price">$129.95</span>
+                <span class="price-range">(50-100 pcs)</span>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-send-inquiry">Send inquiry</button>
+                <button class="btn-wishlist" onclick="toggleWishlist(this)">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+
+            <div class="spec-table">
+                <div class="spec-row">
+                    <span class="spec-label">Condition</span>
+                    <span class="spec-value">Brand new</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Material</span>
+                    <span class="spec-value">Plastic / Cotton blend</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Category</span>
+                    <span class="spec-value">Electronics, gadgets</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Item num</span>
+                    <span class="spec-value">23421</span>
+                </div>
+            </div>
+
+            <p class="description">
+                Info about edu item is an ideal companion for anyone engaged in learning. The drone provides precise and stable flight for professional photography...
+                <a href="#" class="read-more">Read more</a>
+            </p>
+
+            <div class="supplier-card">
+                <div class="sup-avatar">R</div>
+                <div class="sup-info">
+                    <p class="sup-name">Supplier</p>
+                    <p class="sup-company">Guanjoi Trading LLC</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+
+        <section class="similar-section">
+            <h3 class="section-title">Similar products</h3>
+            <div class="similar-grid">
+                <div class="sim-card">
+                    <img src="assests\cloth\1.jpg" alt="sim">
+                    <p class="sim-price">$10.30</p>
+                    <p class="sim-desc">T-shirts with multiple colors</p>
+                </div>
+                <div class="sim-card">
+                    <img src="assests\cloth\3.jpg" alt="sim">
+                    <p class="sim-price">$10.30</p>
+                    <p class="sim-desc">T-shirts with multiple colors</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleWishlist(btn) {
+            const icon = btn.querySelector('i');
+            // Toggle between regular heart and solid blue heart
+            icon.classList.toggle('far');
+            icon.classList.toggle('fas');
+            btn.classList.toggle('liked');
+        }
+    </script>
+</body>
+</html>

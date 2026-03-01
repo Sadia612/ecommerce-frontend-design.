@@ -1,0 +1,120 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+/* Puri screen ko center karne ke liye */
+.main-screen-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f0f2f5; /* Light background taake mid wala box nazar aaye */
+}
+
+/* Aik Mobile size ka container jo center mein hoga */
+.mobile-frame {
+    width: 375px; /* Standard mobile width */
+    height: 667px; /* Standard mobile height */
+    background-color: #717171; /* Dark gray overlay color inside frame */
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.sidebar {
+    width: 260px; /* Sidebar is smaller than the frame */
+    background: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+/* Header with Avatar */
+.sidebar-header {
+    background-color: #F7FAFC;
+    padding: 20px;
+    position: relative;
+    border-bottom: 1px solid #E3E8EE;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #8B96A5;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 44px;
+    height: 44px;
+    background: #DEE2E7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.user-avatar i {
+    color: #8B96A5;
+    font-size: 20px;
+}
+
+.auth-box {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.pipe {
+    color: #8B96A5;
+    margin: 0 4px;
+}
+
+/* Links List */
+.nav-links {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.nav-links li {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    color: #505050;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nav-links li i {
+    width: 35px;
+    font-size: 18px;
+    color: #8B96A5;
+}
+
+.hr-line {
+    height: 1px;
+    background: #E3E8EE;
+    margin: 5px 0;
+}
+
+.legal-links {
+    list-style: none;
+    padding: 15px 20px;
+}
+
+.legal-links li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #505050;
+    cursor: pointer;
+}
+
+/* Clickable overlay area on the right side of sidebar */
+.frame-overlay {
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+}

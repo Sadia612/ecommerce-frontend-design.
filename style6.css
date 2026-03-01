@@ -1,0 +1,437 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: #F7FAFC; display: flex; justify-content: center; }
+
+.main-container { width: 100%; max-width: 540px; background: #fff; min-height: 100vh; position: relative; }
+
+/* Header */
+/* Header Top Row Alignment */
+.top-row {
+    display: flex;
+    justify-content: space-between; /* Left aur Right groups ko corners par bhejne ke liye */
+    align-items: center;            /* Sabko vertically center karne ke liye */
+    padding: 5px 0;
+    margin-bottom: 15px;
+}
+
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Bars aur Logo ke darmiyan space */
+}
+
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 18px; /* Cart aur User icons ke darmiyan space */
+    color: #8B96A5; /* Icons ka standard color */
+    font-size: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Icons styling taake alignment kharab na ho */
+.top-row i {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #0D6EFD;
+    justify-content: center;
+}
+
+.fa-bars {
+    font-size: 20px;
+    color: #1C1C1C;
+}
+.logo-text { color: #0D6EFD; font-weight: 800; font-size: 22px; }
+
+.search-box { background: #F3F3F3; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; border: 1px solid #E3E8EE; margin-bottom: 15px; }
+.search-box input { border: none; background: transparent; outline: none; width: 100%; }
+
+/* Tabs Scroll - Iska overflow dropdown ko block karta tha */
+.tabs-scroll { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 5px 0; }
+.tabs-scroll::-webkit-scrollbar { display: none; }
+
+.tab { background: #EFF2F4; color: #0D6EFD; padding: 8px 16px; border-radius: 6px; font-size: 14px; white-space: nowrap; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+.tab.active { background: #E5F1FF; font-weight: 600; }
+
+/* Dropdown Content - FIXED Position is the secret! */
+.dropdown-content {
+    display: none;
+    position: fixed; /* Taake scroll se bahar nazar aaye */
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    border: 1px solid #E3E8EE;
+    z-index: 99999;
+}
+.show { display: block !important; }
+.dropdown-content a { color: #1C1C1C; padding: 12px 16px; text-decoration: none; display: block; font-size: 14px; border-bottom: 1px solid #F7FAFC; }
+.dropdown-content a:hover { background: #F3F3F3; }
+
+/* Grid & Banner */
+.content-section { padding: 20px 15px; }
+.mid-grid { display: flex; border: 1px solid #E3E8EE; border-radius: 8px; overflow: hidden; }
+.big-card { flex: 1; padding: 15px 12px; border-right: 1px solid #E3E8EE; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; background: #fff; }
+.big-card img { height: 70px; object-fit: contain; align-self: flex-end; }
+.source-link { display: inline-block; margin-top: 18px; color: #0D6EFD; text-decoration: none; font-weight: 700; }
+.blue-banner { padding: 0 15px 20px; }
+.banner-inner { background: linear-gradient(135deg, #237CFF 0%, #005ADE 100%); padding: 25px 20px; border-radius: 10px; color: #fff; }
+.banner-inner button { background: #0D6EFD; border: 1px solid #fff; padding: 10px 18px; border-radius: 6px; color: #fff; font-weight: 600; margin-top: 10px; cursor: pointer; }
+/* Trending Banner Styling */
+.trending-banner {
+    background-color: #55BDC3; /* Wahi teal color jo image mein hai */
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-subtext { font-size: 16px; opacity: 0.9; }
+.banner-title { font-size: 22px; font-weight: 700; margin: 5px 0 15px; }
+
+.learn-more-btn {
+    background: #fff;
+    color: #0D6EFD;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.banner-image img {
+    height: 100px;
+    transform: rotate(-15deg); /* Design ki tarah tilted */
+}
+
+/* Deals and Offers Section */
+.deals-section {
+    padding: 15px;
+    background: #fff;
+    border-top: 1px solid #E3E8EE;
+}
+
+.deals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deals-text h3 { font-size: 18px; color: #1C1C1C; }
+.deals-text p { font-size: 14px; color: #8B96A5; }
+
+/* TRENDING BANNER - FIX FOR BACKGROUND IMAGE */
+.trending-banner {
+    margin: 15px;
+    padding: 30px 20px;
+    border-radius: 8px;
+    min-height: 160px;
+    /* Yahan image poore background par aayegi */
+    background: #55BDC3 url('assests/Banner-board-800x420 2.png') no-repeat;
+    background-size: cover; 
+    background-position: right center;
+    display: flex;
+    align-items: center;
+    color: #1C1C1C;
+}
+
+.banner-subtext { font-size: 16px; margin-bottom: 5px; color: #1C1C1C; }
+.banner-title { font-size: 24px; font-weight: 700; margin-bottom: 15px; max-width: 200px; }
+.learn-more-btn { background: #fff; color: #0D6EFD; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+/* Countdown Boxes */
+.countdown { display: flex; gap: 6px; }
+
+.time-box {
+    background: #EFF2F4;
+    width: 45px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.time-box .num {
+    font-weight: 700;
+    color: #8B96A5;
+    font-size: 16px;
+}
+
+.time-box .label {
+    font-size: 10px;
+    color: #8B96A5;
+}
+
+/* Products Discount Grid */
+.products-grid {
+    display: flex;
+    border-bottom: 1px solid #E3E8EE;
+}
+
+.product-item {
+    flex: 1;
+    padding: 20px 10px;
+    text-align: center;
+    border-right: 1px solid #E3E8EE;
+}
+
+.product-item:last-child { border-right: none; }
+
+.product-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 13px;
+    color: #1C1C1C;
+    margin-bottom: 8px;
+}
+
+.discount-badge {
+    background: #FFE3E3;
+    color: #EB001B;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Home and Outdoor Section */
+.home-outdoor {
+    padding: 20px 0;
+    border-top: 10px solid #F7FAFC; /* Section separator */
+}
+/* Recommended Section Styling */
+.recommended-section {
+    padding: 15px;
+    background-color: #F7FAFC; /* Light grey background */
+}
+
+.recommended-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Do columns banayein */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.recom-card {
+    background: #fff;
+    border: 1px solid #E3E8EE;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.recom-card .img-box {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recom-card img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+
+.recom-info {
+    padding: 10px 12px 15px;
+}
+
+.recom-info .price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 4px;
+}
+
+.recom-info .desc {
+    font-size: 13px;
+    color: #8B96A5;
+    line-height: 1.4;
+}
+
+/* Section Title Fix */
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1C1C1C;
+}
+.section-heading {
+    padding: 0 15px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1C1C1C;
+}
+
+.outdoor-grid {
+    display: flex;
+    border-top: 1px solid #E3E8EE;
+}
+
+.outdoor-item {
+    flex: 1;
+    padding: 15px 10px;
+    border-right: 1px solid #E3E8EE;
+}
+
+.outdoor-item:last-child { border-right: none; }
+
+.outdoor-item img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.outdoor-item p {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.outdoor-item span {
+    font-size: 11px;
+    color: #8B96A5;
+}
+
+/* Source Now & Pagination Box */
+.source-now-container {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 15px; border-top: 1px solid #E3E8EE; margin-bottom: 0;
+}
+.source-link { color: #0D6EFD; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+.pagination-box {
+    display: flex; align-items: center; gap: 12px; background: #EFF2F4;
+    padding: 6px 12px; border-radius: 6px; color: #8B96A5; font-size: 14px;
+}
+.page-count { color: #1C1C1C; font-weight: 500; }
+.arrow-disabled { opacity: 0.4; }
+
+.blue-request-banner {
+    margin: 20px 15px;
+    border-radius: 8px;
+    /* Gradient aur halki image ka touch */
+    background: linear-gradient(135deg, #237CFF 0%, #005ADE 100%);
+    padding: 25px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.blue-request-banner {
+    margin: 20px 15px;
+    border-radius: 8px;
+    padding: 30px 20px;
+    position: relative; /* Ye zaroori hai */
+    overflow: hidden;
+    background: #237CFF; /* Default blue color agar image na load ho */
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+}
+
+/* Image ko background ki tarah set karne ki setting */
+.banner-bg-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image ko phelnay se bachaega */
+    opacity: 0.5; /* Taake text saaf nazar aaye (Snippet style) */
+    z-index: 1;
+}
+
+.blue-banner-content {
+    position: relative;
+    z-index: 2; /* Text ko image ke upar rakhta hai */
+}
+
+.blue-banner-content p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    max-width: 250px;
+}
+
+.send-inquiry-btn {
+    background: #0D6EFD;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+/* 1. Container configuration */
+.outdoor-grid, .mid-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    background: #fff;
+    border: 1px solid #E0E7EE;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 10px 15px !important;
+}
+
+/* 2. Card Fix: Flexbox Magic */
+.outdoor-item, .big-card {
+    display: flex !important;
+    flex-direction: column !important; /* Content upar se niche */
+    justify-content: space-between !important; /* Text ko top aur image ko bottom par lock karega */
+    padding: 12px !important;
+    height: 130px !important; /* Fixed height taake sab barabar rahein */
+    border-right: 1px solid #E0E7EE !important;
+    background: #fff;
+    position: relative;
+}
+
+/* 3. Text Styling (Top-Left) */
+.text-content, .card-info {
+    text-align: left !important;
+    width: 100%;
+}
+
+.text-content p, .card-info p {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #1C1C1C !important;
+    margin: 0 !important;
+}
+
+.text-content span, .card-info span {
+    font-size: 11px !important;
+    color: #8B96A5 !important;
+    display: block;
+    margin-top: 4px;
+}
+
+/* 4. Image Styling (Bottom-Right) */
+.outdoor-item img, .big-card img {
+    width: 60px !important; /* Size thora bada kiya taake saaf dikhe */
+    height: 60px !important;
+    object-fit: contain !important;
+    align-self: flex-end !important; /* Image ko right side par dhakelega */
+    margin-top: auto; /* Image ko niche push karega */
+}
+
+/* Remove last border */
+.outdoor-item:last-child, .big-card:last-child {
+    border-right: none !important;
+}

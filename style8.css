@@ -1,0 +1,113 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #fff; }
+.main-container { max-width: 480px; margin: 0 auto; position: relative; }
+
+/* Header */
+.detail-header { display: flex; justify-content: space-between; padding: 15px; position: absolute; width: 100%; top: 0; z-index: 10; }
+.detail-header i { font-size: 20px; color: #1C1C1C; cursor: pointer; }
+.nav-right i { margin-left: 20px; }
+
+/* Gallery */
+.product-gallery { width: 100%; background: #F7FAFC; height: 350px; display: flex; align-items: center; justify-content: center; position: relative; }
+#main-img { max-width: 80%; object-fit: contain; }
+.slider-dots { position: absolute; bottom: 15px; display: flex; gap: 5px; }
+.dot { width: 8px; height: 8px; background: #C4C4C4; border-radius: 50%; }
+.dot.active { background: #1C1C1C; width: 20px; border-radius: 10px; }
+
+/* Content */
+.product-content { padding: 20px; }
+.rating-row { display: flex; align-items: center; gap: 15px; font-size: 13px; color: #8B96A5; margin-bottom: 10px; }
+.stars { color: #FF9017; }
+.rating-val { font-weight: bold; margin-left: 5px; }
+
+.product-title { font-size: 18px; font-weight: 600; color: #1C1C1C; margin-bottom: 15px; }
+.price-box { margin-bottom: 20px; }
+.current-price { font-size: 20px; font-weight: 700; color: #FA3434; }
+.price-range { color: #8B96A5; font-size: 14px; margin-left: 8px; }
+
+.btn-send-inquiry { width: 85%; background: #0D6EFD; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+.btn-wishlist { width: 12%; border: 1px solid #DEE2E7; background: white; padding: 11px; border-radius: 6px; margin-left: 2%; color: #0D6EFD; }
+
+/* Table */
+.spec-table { margin: 25px 0; border-top: 1px solid #eee; }
+.spec-row { display: flex; padding: 10px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+.spec-label { color: #8B96A5; width: 40%; }
+.spec-value { color: #505050; width: 60%; }
+
+.description { font-size: 14px; color: #505050; line-height: 1.6; }
+.read-more { color: #0D6EFD; text-decoration: none; font-weight: 500; }
+
+/* Supplier */
+.supplier-card { display: flex; align-items: center; padding: 15px; border: 1px solid #DEE2E7; border-radius: 8px; margin-top: 20px; }
+.sup-avatar { width: 40px; height: 40px; background: #C6F3F1; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #4CA7A1; margin-right: 12px; }
+.sup-company { font-weight: 600; font-size: 14px; }
+.sup-name { font-size: 12px; color: #8B96A5; }
+
+.flags-row { display: flex; gap: 15px; margin-top: 15px; font-size: 12px; color: #8B96A5; }
+
+/* Similar */
+.similar-section { padding: 20px; background: #F7FAFC; margin-top: 20px; }
+.similar-grid { display: flex; gap: 10px; margin-top: 10px; }
+.sim-card { background: #fff; padding: 10px; border-radius: 6px; border: 1px solid #eee; width: 50%; }
+.sim-card img { width: 100%; height: 100px; object-fit: contain; }
+.sim-price { font-weight: bold; margin: 5px 0; }
+.sim-desc { font-size: 12px; color: #8B96A5; }
+
+/* Header Fix: No white background/border */
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    background: transparent; /* Changed from white */
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Wishlist Alignment Fix */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-send-inquiry {
+    flex: 1;
+    background: #0D6EFD;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.btn-wishlist {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #DEE2E7;
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 5px; /* Alignment thori neeche kar di */
+}
+
+.btn-wishlist i {
+    font-size: 20px;
+    color: #0D6EFD;
+}
+
+/* Liked state (Blue heart) */
+.btn-wishlist.liked i {
+    color: #0D6EFD; /* Same blue, but will be solid from JS */
+}
+
+.btn-wishlist.liked {
+    border-color: #0D6EFD;
+    background: #F0F7FF;
+}
+
+/* Baqi layout as it is... */

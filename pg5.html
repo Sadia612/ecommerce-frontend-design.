@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand - My Cart</title>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container top-bar">
+         <div class="brand-logo-container">
+    <div class="logo-box">
+        <i class="fas fa-shopping-bag"></i>
+    </div>
+    <span class="brand-name">Brand</span>
+</div>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <select><option>All category</option></select>
+                <button>Search</button>
+            </div>
+            <div class="user-controls">
+                <div class="control-node"><i class="fas fa-user"></i><p>Profile</p></div>
+                <div class="control-node"><i class="fas fa-comment-dots"></i><p>Message</p></div>
+                <div class="control-node"><i class="fas fa-heart"></i><p>Orders</p></div>
+                <div class="control-node active" onclick="location.href='pg5.html'">
+                    <i class="fas fa-shopping-cart"></i><p>My cart</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container cart-page">
+        <h2>My cart (3)</h2>
+        
+        <div class="cart-layout">
+            <div class="cart-items-section">
+            <div class="cart-card">
+    <div class="item-details">
+        <img src="assests/shirt.jpg" alt="product">
+        <div class="info">
+            <h4>T-shirts with multiple colors, for men and lady</h4>
+            <p>Size: medium, Color: blue, Material: Plastic</p>
+            <p class="seller">Seller: Artel Market</p>
+            <div class="item-actions">
+                <button class="remove-btn">Remove</button>
+                <button class="save-btn-simple"><i class="far fa-heart"></i> Save for later</button>
+            </div>
+        </div>
+        <div class="price-qty">
+            <span class="price">$78.99</span>
+            <select class="qty-select"><option>Qty: 9</option></select>
+        </div>
+    </div>
+    <hr>
+
+    <div class="item-details">
+        <img src="assests/white.jpg" alt="product">
+        <div class="info">
+            <h4>Soft hoddies for winter - Unisex</h4>
+            <p>Size: large, Color: white, Material: Cotton</p>
+            <p class="seller">Seller: Best factory LLC</p>
+            <div class="item-actions">
+                <button class="remove-btn">Remove</button>
+                <button class="save-btn-simple"><i class="far fa-heart"></i> Save for later</button>
+            </div>
+        </div>
+        <div class="price-qty">
+            <span class="price">$39.00</span>
+            <select class="qty-select"><option>Qty: 3</option></select>
+        </div>
+    </div>
+    <hr>
+
+    <div class="item-details">
+        <img src="assests/men.jpg" alt="product">
+        <div class="info">
+            <h4>Men's Classic Blazer - Slim Fit</h4>
+            <p>Size: medium, Color: grey, Material: Wool</p>
+            <p class="seller">Seller: Artel Market</p>
+            <div class="item-actions">
+                <button class="remove-btn">Remove</button>
+                <button class="save-btn-simple"><i class="far fa-heart"></i> Save for later</button>
+            </div>
+        </div>
+        <div class="price-qty">
+            <span class="price">$170.50</span>
+            <select class="qty-select"><option>Qty: 1</option></select>
+        </div>
+    </div>
+</div>
+
+                <div class="cart-footer-btns">
+                    <button class="btn-back" onclick="location.href='pg6.html'"><i class="fas fa-arrow-left"></i> Back to shop</button>
+                    <button class="btn-remove-all">Remove all</button>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="badge"><i class="fas fa-lock"></i> <div><strong>Secure payment</strong><p>Have you ever finally just</p></div></div>
+                    <div class="badge"><i class="fas fa-comment-dots"></i> <div><strong>Customer support</strong><p>Have you ever finally just</p></div></div>
+                    <div class="badge"><i class="fas fa-truck"></i> <div><strong>Free delivery</strong><p>Have you ever finally just</p></div></div>
+                </div>
+            </div>
+
+            <aside class="cart-summary">
+                <div class="coupon-box">
+                    <p>Have a coupon?</p>
+                    <div class="input-group">
+                        <input type="text" placeholder="Add coupon">
+                        <button>Apply</button>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-row"><span>Subtotal:</span><span>$1403.97</span></div>
+                    <div class="summary-row"><span>Discount:</span><span class="red">-$60.00</span></div>
+                    <div class="summary-row"><span>Tax:</span><span class="green">+$14.00</span></div>
+                    <hr>
+                    <div class="summary-row total"><strong>Total:</strong><strong>$1357.97</strong></div>
+                   <button class="checkout-btn">Checkout</button>
+
+<div class="payment-methods">
+    <div class="pay-card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="Amex"></div>
+    <div class="pay-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"></div>
+    <div class="pay-card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"></div>
+    <div class="pay-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSevsRPKCAGaTNdL5p2HJFQE4C-BU0nKh2IVQ&s" alt="Visa"></div>
+    <div class="pay-card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Apple_Pay_logo.svg" alt="Apple Pay"></div>
+</div>
+                </div>
+            </aside>
+        </div>
+<section class="saved-section">
+    <h3>Saved for later</h3>
+    <div class="saved-grid">
+        <div class="saved-item">
+            <div class="saved-img-container">
+                <img src="assests/tech/2.jpg" alt="Tablet">
+            </div>
+            <p class="saved-price">$99.50</p>
+            <p class="saved-name">GoPro HERO6 4K Action Camera - Black</p>
+            <button class="btn-move-cart">
+                <i class="fas fa-shopping-cart"></i> Move to cart
+            </button>
+        </div>
+
+        <div class="saved-item">
+            <div class="saved-img-container">
+                <img src="assests/tech/4.jpg" alt="iPhone">
+            </div>
+            <p class="saved-price">$99.50</p>
+            <p class="saved-name">GoPro HERO6 4K Action Camera - Black</p>
+            <button class="btn-move-cart">
+                <i class="fas fa-shopping-cart"></i> Move to cart
+            </button>
+        </div>
+
+        <div class="saved-item">
+            <div class="saved-img-container">
+                <img src="assests/tech/8.jpg" alt="Watch">
+            </div>
+            <p class="saved-price">$99.50</p>
+            <p class="saved-name">GoPro HERO6 4K Action Camera - Black</p>
+            <button class="btn-move-cart">
+                <i class="fas fa-shopping-cart"></i> Move to cart
+            </button>
+        </div>
+
+        <div class="saved-item">
+            <div class="saved-img-container">
+                <img src="assests/tech/7.jpg" alt="Laptop">
+            </div>
+            <p class="saved-price">$99.50</p>
+            <p class="saved-name">GoPro HERO6 4K Action Camera - Black</p>
+            <button class="btn-move-cart">
+                <i class="fas fa-shopping-cart"></i> Move to cart
+            </button>
+        </div>
+    </div>
+</section>
+        </section>
+
+       
+        <div class="promo-banner-blue bottom-banner">
+            <div class="promo-content">
+                <h3>Super discount on more than 100 USD</h3>
+                <p>Have you ever finally just write dummy info</p>
+            </div>
+            <button class="btn-orange">Shop now</button>
+        </div>
+    </main>
+
+    <script>
+        // Save for later heart toggle (only heart blue)
+        document.querySelectorAll('.save-btn-simple').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('is-active');
+                const icon = this.querySelector('i');
+                if (this.classList.contains('is-active')) {
+                    icon.classList.replace('far', 'fas');
+                } else {
+                    icon.classList.replace('fas', 'far');
+                }
+            });
+        });
+    </script>
+     
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="brand-col">
+                <div class="logo blue"><i class="fas fa-shopping-bag"></i> <span>Brand</span></div>
+                <p>Best information about the company gies here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i> <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="footer-links"><h4>About</h4><p>About Us</p><p>Find store</p><p>Categories</p><p>Blogs</p></div>
+            <div class="footer-links"><h4>Partnership</h4><p>About Us</p><p>Find store</p><p>Categories</p><p>Blogs</p></div>
+            <div class="footer-links"><h4>Information</h4><p>Help Center</p><p>Money Refund</p><p>Shipping</p><p>Contact us</p></div>
+            <div class="footer-links"><h4>For users</h4><p>Login</p><p>Register</p><p>Settings</p><p>My Orders</p></div>
+            <div class="app-links">
+                <h4>Get app</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" width="120">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="120">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

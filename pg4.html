@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand - Product Detail Page</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container top-bar">
+            <div class="logo" onclick="location.href='index.html'">
+                <div class="logo-icon"><i class="fas fa-shopping-bag"></i></div>
+                <span class="logo-text">Brand</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <select>
+                    <option>All category</option>
+                </select>
+                <button>Search</button>
+            </div>
+          <div class="user-controls">
+    <div class="control-node"><i class="fas fa-user"></i><p>Profile</p></div>
+    <div class="control-node"><i class="fas fa-comment-dots"></i><p>Message</p></div>
+    <div class="control-node"><i class="fas fa-heart"></i><p>Orders</p></div>
+    <div class="control-node" onclick="location.href='pg5.html'" style="cursor: pointer;">
+        <i class="fas fa-shopping-cart"></i>
+        <p>My cart</p>
+    </div>
+</div>
+        </div>
+
+        <nav class="navigation">
+            <div class="container nav-wrap">
+                <div class="nav-left">
+                    <div class="dropdown">
+                        <span class="nav-btn"><i class="fas fa-bars"></i> All category</span>
+                        <div class="dropdown-content">
+                            <a href="#">Mobile Accessories</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Electronics</a>
+                            <a href="#">Home Interiors</a>
+                        </div>
+                    </div>
+                    <span class="nav-btn">Hot offers</span>
+                    <span class="nav-btn">Gift boxes</span>
+                    <span class="nav-btn">Projects</span>
+                    <span class="nav-btn">Menu item</span>
+                    <div class="dropdown">
+                        <span class="nav-btn">Help <i class="fas fa-chevron-down"></i></span>
+                        <div class="dropdown-content">
+                            <a href="#">Contact Info</a>
+                            <a href="#">Shipping Info</a>
+                            <a href="#">Refund Policy</a>
+                            <a href="#">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="dropdown">
+                        <span class="nav-btn">English, USD <i class="fas fa-chevron-down"></i></span>
+                        <div class="dropdown-content">
+                            <a href="#">Urdu, PKR</a>
+                            <a href="#">Arabic, AED</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <span class="nav-btn">Ship to <img src="https://flagcdn.com/w20/pk.png"> <i class="fas fa-chevron-down"></i></span>
+                        <div class="dropdown-content">
+                            <a href="#">Germany <img src="https://flagcdn.com/w20/de.png"></a>
+                            <a href="#">USA <img src="https://flagcdn.com/w20/us.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumbs">
+            Home > Clothings > Men's wear > <span class="active">Summer clothing</span>
+        </div>
+
+        <section class="product-card">
+            <div class="product-gallery">
+                <div class="main-view">
+                    <img src="assests/shirt.jpg" id="mainDisplay">
+                </div>
+                <div class="thumb-list">
+                    <img src="assests/shirt.jpg" onmouseover="updateImg(this.src)">
+                    <img src="assests/white.jpg" onmouseover="updateImg(this.src)">
+                    <img src="assests/small.jpg" onmouseover="updateImg(this.src)">
+                    <img src="assests/men.jpg" onmouseover="updateImg(this.src)">
+                    <img src="assests/shirt.jpg" onmouseover="updateImg(this.src)">
+                </div>
+            </div>
+
+            <div class="product-details">
+                <p class="stock-tag"><i class="fas fa-check"></i> In stock</p>
+                <h1 class="product-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h1>
+                
+                <div class="product-meta">
+                    <span class="rating-stars"><i class="fas fa-star"></i> 9.3</span>
+                    <span class="sep">•</span>
+                    <span><i class="fas fa-comment"></i> 32 reviews</span>
+                    <span class="sep">•</span>
+                    <span><i class="fas fa-shopping-basket"></i> 154 sold</span>
+                </div>
+
+                <div class="price-tiers">
+                    <div class="tier-item">
+                        <h2 class="price-red">$98.00</h2>
+                        <p>50-100 pcs</p>
+                    </div>
+                    <div class="tier-item border-left">
+                        <h2>$90.00</h2>
+                        <p>100-700 pcs</p>
+                    </div>
+                    <div class="tier-item border-left">
+                        <h2>$78.00</h2>
+                        <p>700+ pcs</p>
+                    </div>
+                </div>
+
+                <div class="specs-grid">
+                    <div class="spec-row"><span class="spec-label">Price:</span><span class="spec-val">Negotiable</span></div>
+                    <div class="spec-row"><span class="spec-label">Type:</span><span class="spec-val">Classic shoes</span></div>
+                    <div class="spec-row"><span class="spec-label">Material:</span><span class="spec-val">Plastic material</span></div>
+                    <div class="spec-row"><span class="spec-label">Design:</span><span class="spec-val">Modern nice</span></div>
+                </div>
+
+                <button class="save-btn"><i class="far fa-heart"></i> Save for later</button>
+            </div>
+
+            <aside class="supplier-info">
+                <div class="supp-box">
+                    <div class="supp-top">
+                        <div class="supp-letter">R</div>
+                        <div class="supp-name">
+                            <p>Supplier</p>
+                            <strong>Guanjoi Trading LLC</strong>
+                        </div>
+                    </div>
+                    <div class="supp-meta">
+                        <p><img src="https://flagcdn.com/w20/de.png"> Germany, Berlin</p>
+                        <p><i class="fas fa-shield-alt"></i> Verified Seller</p>
+                        <p><i class="fas fa-globe"></i> Worldwide shipping</p>
+                    </div>
+                    <button class="btn-blue">Send inquiry</button>
+                    <button class="btn-white">Seller's profile</button>
+                </div>
+            </aside>
+        </section>
+
+       <div class="content-wrapper-flex">
+    
+    <section class="tabs-section">
+        <div class="tabs-header">
+            <span class="tab-btn active">Description</span>
+            <span class="tab-btn">Reviews</span>
+            <span class="tab-btn">Shipping</span>
+            <span class="tab-btn">About seller</span>
+        </div>
+        <div class="tab-inner-content">
+            <p class="tab-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <table class="details-table">
+                <tr><td>Model</td><td>#2789467</td></tr>
+                <tr><td>Style</td><td>Classic style</td></tr>
+                <tr><td>Certificate</td><td>ISO-898921212</td></tr>
+                <tr><td>Size</td><td>34mm x 450mm x 19mm</td></tr>
+                <tr><td>Memory</td><td>36GB RAM</td></tr>
+            </table>
+            <ul class="feature-checklist">
+                <li><i class="fas fa-check"></i> Some great feature name here</li>
+                <li><i class="fas fa-check"></i> Lorem ipsum dolor sit amet, consectetur</li>
+            </ul>
+        </div>
+    </section>
+
+    <aside class="sidebar-right">
+        <div class="you-may-like">
+            <h4>You may like</h4>
+            <div class="like-item">
+                <img src="assests/shirt.jpg">
+                <div class="like-info"><p>Men Blazers Sets</p><span>$7.00 - $99.50</span></div>
+            </div>
+            <div class="like-item">
+                <img src="assests/men.jpg">
+                <div class="like-info"><p>Men Shirt Sleeve</p><span>$7.00 - $99.50</span></div>
+            </div>
+            <div class="like-item">
+                <img src="assests/small.jpg">
+                <div class="like-info"><p>Apple Watch Series</p><span>$7.00 - $99.50</span></div>
+            </div>
+            <div class="like-item">
+                <img src="assests/white.jpg">
+                <div class="like-info"><p>Basketball Socks</p><span>$7.00 - $99.50</span></div>
+            </div>
+            <div class="like-item">
+                <img src="assests/shirt.jpg">
+                <div class="like-info"><p>Summer T-Shirts</p><span>$7.00 - $99.50</span></div>
+            </div>
+        </div>
+    </aside>
+
+</div>
+
+        <section class="related-section">
+            <h3 class="section-title">Related products</h3>
+            <div class="related-grid">
+                <div class="related-item">
+                    <div class="rel-img-box"><img src="assests/shirt.jpg"></div>
+                    <p>Xiaomi Redmi 8 Original</p><span>$32.00-$40.00</span>
+                </div>
+                <div class="related-item">
+                    <div class="rel-img-box"><img src="assests/white.jpg"></div>
+                    <p>Xiaomi Redmi 8 Original</p><span>$32.00-$40.00</span>
+                </div>
+                <div class="related-item">
+                    <div class="rel-img-box"><img src="assests/small.jpg"></div>
+                    <p>Xiaomi Redmi 8 Original</p><span>$32.00-$40.00</span>
+                </div>
+                <div class="related-item">
+                    <div class="rel-img-box"><img src="assests/men.jpg"></div>
+                    <p>Xiaomi Redmi 8 Original</p><span>$32.00-$40.00</span>
+                </div>
+                <div class="related-item">
+                    <div class="rel-img-box"><img src="assests/shirt.jpg"></div>
+                    <p>Xiaomi Redmi 8 Original</p><span>$32.00-$40.00</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="promo-banner-blue bottom-banner">
+            <div class="promo-content">
+                <h3>Super discount on more than 100 USD</h3>
+                <p>Have you ever finally just write dummy info</p>
+            </div>
+            <button class="btn-orange">Shop now</button>
+        </div>
+        <script>
+const saveBtn = document.querySelector('.save-btn');
+
+saveBtn.addEventListener('click', function() {
+    // Class toggle hogi
+    this.classList.toggle('is-active');
+    
+    // Heart icon ko empty se solid mein change karne ke liye
+    const icon = this.querySelector('i');
+    if (this.classList.contains('is-active')) {
+        icon.classList.replace('far', 'fas'); // far = outline, fas = solid
+    } else {
+        icon.classList.replace('fas', 'far');
+    }
+});
+</script>
+    </main>
+
+    <section class="newsletter">
+        <h3>Subscribe on our newsletter</h3>
+        <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+        <div class="news-form">
+            <div class="input-with-icon"><i class="far fa-envelope"></i><input type="email" placeholder="Email"></div>
+            <button>Subscribe</button>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="brand-col">
+                <div class="logo blue"><i class="fas fa-shopping-bag"></i> <span>Brand</span></div>
+                <p>Best information about the company gies here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i> <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="footer-links"><h4>About</h4><p>About Us</p><p>Find store</p><p>Categories</p><p>Blogs</p></div>
+            <div class="footer-links"><h4>Partnership</h4><p>About Us</p><p>Find store</p><p>Categories</p><p>Blogs</p></div>
+            <div class="footer-links"><h4>Information</h4><p>Help Center</p><p>Money Refund</p><p>Shipping</p><p>Contact us</p></div>
+            <div class="footer-links"><h4>For users</h4><p>Login</p><p>Register</p><p>Settings</p><p>My Orders</p></div>
+            <div class="app-links">
+                <h4>Get app</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" width="120">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="120">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

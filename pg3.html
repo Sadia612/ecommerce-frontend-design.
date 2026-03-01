@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid & List Toggle - Full Options</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Essential Internal Styles */
+        .active-icon { color: #0d6efd; }
+        .product-grid.list-view { display: flex !important; flex-direction: column !important; }
+        .product-grid.list-view .grid-card { display: flex; flex-direction: row; width: 100%; margin-bottom: 15px; align-items: center; text-align: left; }
+        .product-grid.list-view .card-img { width: 200px; min-width: 200px; padding: 10px; }
+        .product-grid.list-view .card-body { flex-grow: 1; }
+        .icon-item:hover { color: #0d6efd; cursor: pointer; }
+        .nav-links li, .nav-settings span { position: relative; cursor: pointer; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0; background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); list-style: none; padding: 10px 0; z-index: 1000; min-width: 160px; border-radius: 4px;
+        }
+        .nav-links li:hover .dropdown-menu, .nav-settings span:hover .dropdown-menu { display: block; }
+        .dropdown-menu li { padding: 8px 20px; color: #333; font-size: 14px; }
+        .dropdown-menu li:hover { background: #e3f2fd; color: #0d6efd !important; }
+        .wishlist.liked { font-weight: 900; color: #0d6efd !important; }
+        
+        /* Sidebar Polish */
+        .filter-group { border-top: 1px solid #e0e0e0; padding: 15px 0; }
+        .filter-header { display: flex; justify-content: space-between; font-weight: 600; cursor: pointer; font-size: 14px; margin-bottom: 10px; }
+        .stars { color: #FF9017; font-size: 14px; }
+        .see-all { color: #0d6efd; cursor: pointer; font-size: 13px; display: block; margin-top: 8px; }
+        .apply-btn-outline { width: 100%; border: 1px solid #dee2e7; background: #fff; color: #0d6efd; padding: 8px; border-radius: 6px; font-weight: bold; margin-top: 10px; cursor: pointer; }
+        .filter-list { list-style: none; padding: 0; }
+        .filter-list li { padding: 5px 0; font-size: 14px; color: #505050; cursor: pointer; }
+        .dropdown-content label { display: block; margin-bottom: 8px; font-size: 14px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="wide-container top-nav">
+            <div class="logo">
+                <div class="logo-box"><i class="fas fa-shopping-bag"></i></div>
+                <span>Brand</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <select><option>All category</option></select>
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="header-icons">
+                <div class="icon-item"><i class="fas fa-user"></i><p>Profile</p></div>
+                <div class="icon-item"><i class="fas fa-comment-dots"></i><p>Message</p></div>
+                <div class="icon-item"><i class="fas fa-heart"></i><p>Orders</p></div>
+                <div class="icon-item"><i class="fas fa-shopping-cart"></i><p>My cart</p></div>
+            </div>
+        </div>
+        <nav class="bottom-nav">
+            <div class="wide-container nav-flex">
+                <ul class="nav-links">
+                    <li><i class="fas fa-bars"></i> All category
+                        <ul class="dropdown-menu">
+                            <li>Mobile Accessories</li>
+                            <li onclick="window.location.href='pg4.html'">Dresses</li>
+                            <li>Electronics</li>
+                        </ul>
+                    </li>
+                    <li>Hot offers</li> <li>Gift boxes</li> <li>Projects</li> <li>Menu item</li>
+                    <li>Help <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown-menu"><li>Contact Us</li><li>FAQs</li></ul>
+                    </li>
+                </ul>
+                <div class="nav-settings">
+                    <span>English, USD <i class="fas fa-chevron-down"></i></span>
+                    <span>Ship to <img src="https://flagcdn.com/w20/pk.png"> <i class="fas fa-chevron-down"></i></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content wide-container layout-flex">
+        <aside class="sidebar">
+            <div class="filter-group">
+                <div class="filter-header" onclick="toggleDropdown(this)">Category <i class="fas fa-chevron-up"></i></div>
+                <ul class="filter-list dropdown-content">
+                    <li>Mobile accessory</li>
+                    <li>Electronics</li>
+                    <li>Smartphones</li>
+                    <li>Modern tech</li>
+                    <li class="see-all">See all</li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header" onclick="toggleDropdown(this)">Brands <i class="fas fa-chevron-up"></i></div>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" checked> Samsung</label>
+                    <label><input type="checkbox" checked> Apple</label>
+                    <label><input type="checkbox"> Huawei</label>
+                    <label><input type="checkbox" checked> Pocco</label>
+                    <label><input type="checkbox"> Lenovo</label>
+                    <span class="see-all">See all</span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header" onclick="toggleDropdown(this)">Features <i class="fas fa-chevron-up"></i></div>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" checked> Metallic</label>
+                    <label><input type="checkbox"> Plastic cover</label>
+                    <label><input type="checkbox"> 8GB Ram</label>
+                    <label><input type="checkbox"> Super power</label>
+                    <span class="see-all">See all</span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header" onclick="toggleDropdown(this)">Price range <i class="fas fa-chevron-up"></i></div>
+                <div class="dropdown-content">
+                    <input type="range" min="0" max="9999" class="slider" style="width:100%">
+                    <div style="display:flex; gap:5px; margin-top:10px;">
+                        <input type="number" placeholder="0" style="width:50%; padding:5px;">
+                        <input type="number" placeholder="9999" style="width:50%; padding:5px;">
+                    </div>
+                    <button class="apply-btn-outline">Apply</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header" onclick="toggleDropdown(this)">Condition <i class="fas fa-chevron-down"></i></div>
+                <div class="dropdown-content" style="display:none">
+                    <label><input type="radio" name="condition"> Any</label>
+                    <label><input type="radio" name="condition"> Refurbished</label>
+                    <label><input type="radio" name="condition"> Brand New</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header" onclick="toggleDropdown(this)">Ratings <i class="fas fa-chevron-up"></i></div>
+                <div class="dropdown-content">
+                    <label><input type="checkbox"> <span class="stars">★★★★★</span></label>
+                    <label><input type="checkbox"> <span class="stars">★★★★☆</span></label>
+                    <label><input type="checkbox"> <span class="stars">★★★☆☆</span></label>
+                </div>
+            </div>
+        </aside>
+
+        <section class="product-area">
+            <div class="list-header">
+                <span>12,911 items in <b>Mobile accessory</b></span>
+                <div class="header-controls">
+                    <div class="view-toggle">
+                        <i class="fas fa-th-large active-icon" id="grid-btn"></i>
+                        <i class="fas fa-bars" id="list-btn"></i>
+                    </div>
+                </div>
+            </div>
+
+           <div class="product-grid" id="product-container">
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/1.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$99.50</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★★☆</span> <span class="score">7.5</span></div>
+            <p class="title">GoPro HERO6 4K Action Camera - Black</p>
+        </div>
+    </div>
+
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/4.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$45.00</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★★★</span> <span class="score">9.0</span></div>
+            <p class="title">Smartwatch Series 7 Waterproof Sport</p>
+        </div>
+    </div>
+
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/3.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$340.00</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★★☆</span> <span class="score">8.2</span></div>
+            <p class="title">Samsung Galaxy Tab S7 FE 12.4"</p>
+        </div>
+    </div>
+
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/2.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$999.00</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★★★</span> <span class="score">9.8</span></div>
+            <p class="title">MacBook Pro M1 13-inch 256GB</p>
+        </div>
+    </div>
+
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/6.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$89.00</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★★☆</span> <span class="score">7.0</span></div>
+            <p class="title">Gaming Set RGB Keyboard and Mouse</p>
+        </div>
+    </div>
+
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/4.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$120.00</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★★★</span> <span class="score">9.5</span></div>
+            <p class="title">Canon EOS DSLR Camera 18-55mm</p>
+        </div>
+    </div>
+
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/7.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$12.50</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★★☆</span> <span class="score">8.1</span></div>
+            <p class="title">Sony Wireless Noise Cancelling Headset</p>
+        </div>
+    </div>
+
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/8.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$15.00</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★☆☆</span> <span class="score">6.5</span></div>
+            <p class="title">Leather Wallet Brown - Men's Classic</p>
+        </div>
+    </div>
+
+    <div class="grid-card">
+        <div class="card-img"><img src="assests/tech/1.jpg" style="width:100%"></div>
+        <div class="card-body">
+            <div class="price-row"><span class="current-price">$24.99</span><i class="far fa-heart wishlist" onclick="toggleLike(this)"></i></div>
+            <div class="rating-row"><span class="stars">★★★★☆</span> <span class="score">7.2</span></div>
+            <p class="title">Electric Kettle 1.5L Stainless Steel</p>
+        </div>
+    </div>
+</div>
+        </section>
+    </main>
+
+    <script>
+        function toggleDropdown(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('i');
+            content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+            icon.classList.toggle('fa-chevron-up');
+            icon.classList.toggle('fa-chevron-down');
+        }
+        function toggleLike(element) {
+            element.classList.toggle('liked');
+            element.classList.toggle('far');
+            element.classList.toggle('fas');
+        }
+        const gridBtn = document.getElementById('grid-btn');
+        const listBtn = document.getElementById('list-btn');
+        const container = document.getElementById('product-container');
+
+        listBtn.onclick = () => { container.classList.add('list-view'); listBtn.classList.add('active-icon'); gridBtn.classList.remove('active-icon'); };
+        gridBtn.onclick = () => { container.classList.remove('list-view'); gridBtn.classList.add('active-icon'); listBtn.classList.remove('active-icon'); };
+    </script>
+    <section class="newsletter">
+        <h3>Subscribe on our newsletter</h3>
+        <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+        <div class="news-form">
+            <div class="input-with-icon"><i class="far fa-envelope"></i><input type="email" placeholder="Email"></div>
+            <button>Subscribe</button>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="brand-col">
+                <div class="logo blue"><i class="fas fa-shopping-bag"></i> <span>Brand</span></div>
+                <p>Best information about the company gies here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i> <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="footer-links"><h4>About</h4><p>About Us</p><p>Find store</p><p>Categories</p><p>Blogs</p></div>
+            <div class="footer-links"><h4>Partnership</h4><p>About Us</p><p>Find store</p><p>Categories</p><p>Blogs</p></div>
+            <div class="footer-links"><h4>Information</h4><p>Help Center</p><p>Money Refund</p><p>Shipping</p><p>Contact us</p></div>
+            <div class="footer-links"><h4>For users</h4><p>Login</p><p>Register</p><p>Settings</p><p>My Orders</p></div>
+            <div class="app-links">
+                <h4>Get app</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" width="120">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="120">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

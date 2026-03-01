@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand - Summer Clothing</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <header class="main-header">
+        <div class="top-nav">
+            <div class="logo">
+                    <div class="logo-box"><i class="fas fa-shopping-bag"></i></div>
+                    <span>Brand</span>
+                </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <select><option>All category</option></select>
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="header-icons">
+                <div class="icon-item"><i class="fas fa-user"></i><span>Profile</span></div>
+                <div class="icon-item"><i class="fas fa-comment-dots"></i><span>Message</span></div>
+                <div class="icon-item"><i class="fas fa-heart"></i><span>Orders</span></div>
+                <div class="icon-item"><i class="fas fa-shopping-cart"></i><span>My cart</span></div>
+            </div>
+        </div>
+<nav class="bottom-nav">
+    <ul class="nav-links">
+        <li><i class="fas fa-bars"></i> All category</li>
+        <li>Hot offers</li>
+        <li>Gift boxes</li>
+        <li>Projects</li>
+        <li>Menu item</li>
+        <li class="dropdown">
+            Help <i class="fas fa-chevron-down"></i>
+            <ul class="dropdown-content">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="nav-settings">
+        <span class="dropdown">
+            <img src="https://flagcdn.com/w20/us.png" style="vertical-align: middle; margin-right: 5px;"> English, USD <i class="fas fa-chevron-down"></i>
+            <ul class="dropdown-content">
+                <li><a href="#">Urdu, PKR</a></li>
+                <li><a href="#">Arabic, AED</a></li>
+            </ul>
+        </span>
+        <span class="dropdown">
+            Ship to <img src="https://flagcdn.com/w20/de.png" width="20"> <i class="fas fa-chevron-down"></i>
+            <ul class="dropdown-content">
+                <li><a href="#">Pakistan</a></li>
+                <li><a href="#">USA</a></li>
+            </ul>
+        </span>
+    </div>
+</nav>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="breadcrumb">
+            Home <i class="fas fa-chevron-right"></i> Clothings <i class="fas fa-chevron-right"></i> Men's wear <i class="fas fa-chevron-right"></i> Summer clothing
+        </div>
+    </div>
+
+    <div class="container">
+       <aside class="sidebar">
+    <div class="filter-group no-border">
+        <div class="filter-header" onclick="toggleSidebar(this)">Category <i class="fas fa-chevron-up"></i></div>
+        <div class="filter-content">
+            <ul>
+                <li>Mobile accessory</li>
+                <li>Electronics</li>
+                <li>Smartphones</li>
+                <li>Modern tech</li>
+                <li class="see-all">See all</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <div class="filter-header" onclick="toggleSidebar(this)">Brands <i class="fas fa-chevron-up"></i></div>
+        <div class="filter-content">
+            <label><input type="checkbox"> Samsung</label>
+            <label><input type="checkbox"> Apple</label>
+            <label><input type="checkbox"> Huawei</label>
+            <label><input type="checkbox"> Pocco</label>
+            <label><input type="checkbox"> Lenovo</label>
+            <div class="see-all">See all</div>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <div class="filter-header" onclick="toggleSidebar(this)">Price range <i class="fas fa-chevron-up"></i></div>
+        <div class="filter-content">
+            <div class="range-track">
+                <div class="range-dot left"></div>
+                <div class="range-line"></div>
+                <div class="range-dot right"></div>
+            </div>
+            <div class="price-inputs">
+                <div class="p-input"><label>Min</label><input type="text" placeholder="0"></div>
+                <div class="p-input"><label>Max</label><input type="text" placeholder="999999"></div>
+            </div>
+            <button class="apply-btn">Apply</button>
+        </div>
+    </div>
+    
+    <div class="filter-group">
+        <div class="filter-header" onclick="toggleSidebar(this)">Condition <i class="fas fa-chevron-up"></i></div>
+        <div class="filter-content">
+            <label><input type="radio" name="cond" checked> Any</label>
+            <label><input type="radio" name="cond"> Refurbished</label>
+            <label><input type="radio" name="cond"> Brand new</label>
+            <label><input type="radio" name="cond"> Old items</label>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <div class="filter-header" onclick="toggleSidebar(this)">Ratings <i class="fas fa-chevron-up"></i></div>
+        <div class="filter-content">
+            <label><input type="checkbox"> <span style="color: #FF9017;">★★★★★</span></label>
+            <label><input type="checkbox"> <span style="color: #FF9017;">★★★★☆</span></label>
+            <label><input type="checkbox"> <span style="color: #FF9017;">★★★☆☆</span></label>
+            <label><input type="checkbox"> <span style="color: #FF9017;">★★☆☆☆</span></label>
+        </div>
+    </div>
+</aside>
+
+       <main class="product-area" id="product-grid-container">
+    <div class="list-header">
+        <span>12,911 items in <strong>Mobile accessory</strong></span>
+        <div class="header-controls">
+            <label><input type="checkbox" checked> Verified only</label>
+            <select><option>Featured</option></select>
+            <div class="view-toggle">
+                <i class="fas fa-th-large" id="grid-view-btn" onclick="setView('grid')"></i>
+                <i class="fas fa-bars active" id="list-view-btn" onclick="setView('list')"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="assests/tech/1.jpg" alt="Canon"></div>
+        <div class="product-info">
+            <h3>Canon Cmera EOS 2000, Black 10x zoom</h3>
+            <div class="price">$998.00 <span class="old-price">$1128.00</span></div>
+            <div class="rating"><span class="stars">★★★★☆</span> <span class="score">7.5</span> • 154 orders • <span class="shipping">Free Shipping</span></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            <a href="pg3.html" class="view-details">View details</a>
+        </div>
+        <div class="wishlist-btn" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="assests/tech/3.jpg" alt="GoPro"></div>
+        <div class="product-info">
+            <h3>GoPro HERO6 4K Action Camera - Black</h3>
+            <div class="price">$998.00</div>
+            <div class="rating"><span class="stars">★★★★☆</span> <span class="score">7.5</span> • 154 orders • <span class="shipping">Free Shipping</span></div>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+            <a href="pg3.html" class="view-details">View details</a>
+        </div>
+        <div class="wishlist-btn" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="assests/tech/2.jpg" alt="iPhone"></div>
+        <div class="product-info">
+            <h3>Apple iPhone 12 Pro Max - Pacific Blue</h3>
+            <div class="price">$1099.00 <span class="old-price">$1299.00</span></div>
+            <div class="rating"><span class="stars">★★★★★</span> <span class="score">9.8</span> • 2,450 orders • <span class="shipping">Free Shipping</span></div>
+            <p>The ultimate iPhone experience. Super Retina XDR display, Ceramic Shield, and a pro camera system for low-light photography.</p>
+            <a href="pg3.html" class="view-details">View details</a>
+        </div>
+        <div class="wishlist-btn" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="assests/tech/7.jpg" alt="Watch"></div>
+        <div class="product-info">
+            <h3>Samsung Galaxy Watch 4 Classic</h3>
+            <div class="price">$249.00</div>
+            <div class="rating"><span class="stars">★★★★☆</span> <span class="score">8.2</span> • 890 orders • <span class="shipping">Free Shipping</span></div>
+            <p>Track your fitness, heart rate, and sleep with precision. Sleek design with a rotating bezel for easy navigation.</p>
+            <a href="pg3.html" class="view-details">View details</a>
+        </div>
+        <div class="wishlist-btn" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="assests/tech/8.jpg" alt="Laptop"></div>
+        <div class="product-info">
+            <h3>Microsoft Surface Laptop 4, 13.5”</h3>
+            <div class="price">$1299.00 <span class="old-price">$1450.00</span></div>
+            <div class="rating"><span class="stars">★★★★★</span> <span class="score">9.0</span> • 320 orders • <span class="shipping">Free Shipping</span></div>
+            <p>Power and style. Perfect for multitasking with an AMD Ryzen processor and a vibrant touchscreen display.</p>
+            <a href="pg3.html" class="view-details">View details</a>
+        </div>
+        <div class="wishlist-btn" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="assests/tech/9.jpg" alt="Headphones"></div>
+        <div class="product-info">
+            <h3>Sony WH-1000XM4 Noise Canceling Headphones</h3>
+            <div class="price">$348.00</div>
+            <div class="rating"><span class="stars">★★★★★</span> <span class="score">9.5</span> • 1,120 orders • <span class="shipping">Free Shipping</span></div>
+            <p>Industry-leading noise cancellation and premium sound quality. Up to 30 hours of battery life with quick charging.</p>
+            <a href="pg3.html" class="view-details">View details</a>
+        </div>
+        <div class="wishlist-btn" onclick="toggleWishlist(this)"><i class="far fa-heart"></i></div>
+    </div>
+
+    <div class="pagination">
+        <select class="show-count"><option>Show 10</option></select>
+        <div class="page-numbers">
+            <span class="nav-arrow"><i class="fas fa-chevron-left"></i></span>
+            <span class="page">1</span>
+            <span class="page active">2</span>
+            <span class="page">3</span>
+            <span class="nav-arrow"><i class="fas fa-chevron-right"></i></span>
+        </div>
+    </div>
+</main>
+    </div>
+    <script>
+function toggleWishlist(element) {
+    // Is se heart toggle hoga
+    element.classList.toggle('active');
+    
+    // Heart icon ko regular se solid mein change karne ke liye
+    const icon = element.querySelector('i');
+    if (element.classList.contains('active')) {
+        icon.classList.replace('far', 'fas'); // Solid heart
+    } else {
+        icon.classList.replace('fas', 'far'); // Outline heart
+    }
+}
+// 1. All Category Toggle
+document.querySelector('.nav-links li:first-child').addEventListener('click', function() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.border = "2px solid #0D6EFD"; // Highlight sidebar
+    setTimeout(() => { sidebar.style.border = "none"; }, 1500);
+    alert("Categories menu activated!"); 
+});
+
+// 2. Layout Switcher (Grid vs List)
+function setView(viewType) {
+    const container = document.getElementById('product-grid-container');
+    const gridBtn = id = "grid-view-btn";
+    const listBtn = id = "list-view-btn";
+    
+    if (viewType === 'grid') {
+        container.classList.add('grid-layout');
+        document.getElementById('grid-view-btn').classList.add('active');
+        document.getElementById('list-view-btn').classList.remove('active');
+    } else {
+        container.classList.remove('grid-layout');
+        document.getElementById('list-view-btn').classList.add('active');
+        document.getElementById('grid-view-btn').classList.remove('active');
+    }
+}
+
+// 3. Wishlist (Jo pehle diya tha, wahi use karein)
+function toggleWishlist(element) {
+    element.classList.toggle('active');
+    const icon = element.querySelector('i');
+    if (element.classList.contains('active')) {
+        icon.classList.replace('far', 'fas');
+    } else {
+        icon.classList.replace('fas', 'far');
+    }
+}
+function toggleSidebar(header) {
+    // 1. Arrow icon ko rotate karega
+    header.classList.toggle('rotated');
+    
+    // 2. Header ke thik baad wale content (div.filter-content) ko hide/show karega
+    const content = header.nextElementSibling;
+    if (content) {
+        content.classList.toggle('collapsed');
+    }
+}
+</script>
+
+    <section class="newsletter">
+        <h3>Subscribe on our newsletter</h3>
+        <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+        <div class="news-form">
+            <div class="input-with-icon"><i class="far fa-envelope"></i><input type="email" placeholder="Email"></div>
+            <button>Subscribe</button>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="brand-col">
+                <div class="logo blue"><i class="fas fa-shopping-bag"></i> <span>Brand</span></div>
+                <p>Best information about the company gies here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i> <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="footer-links"><h4>About</h4><p>About Us</p><p>Find store</p><p>Categories</p><p>Blogs</p></div>
+            <div class="footer-links"><h4>Partnership</h4><p>About Us</p><p>Find store</p><p>Categories</p><p>Blogs</p></div>
+            <div class="footer-links"><h4>Information</h4><p>Help Center</p><p>Money Refund</p><p>Shipping</p><p>Contact us</p></div>
+            <div class="footer-links"><h4>For users</h4><p>Login</p><p>Register</p><p>Settings</p><p>My Orders</p></div>
+            <div class="app-links">
+                <h4>Get app</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" width="120">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="120">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

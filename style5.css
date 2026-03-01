@@ -1,0 +1,889 @@
+/* --- Root Variables for Exact Colors --- */
+:root {
+    --primary-blue: #0D6EFD;
+    --light-bg: #F7FAFC;
+    --border-gray: #E3E8EE;
+    --text-dark: #1C1C1C;
+    --text-gray: #8B96A5;
+    --green-success: #00B517;
+    --orange-accent: #FF9017;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* --- Global Container Spacing --- */
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Saved Section Spacing --- */
+.saved-section {
+    background: #fff;
+    border: 1px solid #E3E8EE;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px; /* Cart items aur iske darmiyan gap */
+    margin-bottom: 30px; /* Banner aur iske darmiyan gap */
+}
+
+.saved-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Items ke beech ka gap */
+    margin-top: 20px;
+}
+
+/* --- Banner Spacing --- */
+.bottom-banner {
+    margin-bottom: 40px; /* Footer aur banner ke beech ka gap */
+}
+
+/* --- Footer Formatting & Spacing --- */
+.main-footer {
+    background-color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #E3E8EE;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr 1.5fr; /* Columns width according to Figma */
+    gap: 30px;
+    padding: 0 15px;
+}
+
+/* Brand Column */
+.brand-col p {
+    color: #505050;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 15px 0;
+    max-width: 250px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons i {
+    background: #BDC4CD;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    background: #0D6EFD;
+}
+
+/* Link Columns */
+.footer-links h4, .app-links h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1C1C1C;
+}
+
+.footer-links p {
+    font-size: 14px;
+    color: #8B96A5;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-links p:hover {
+    color: #0D6EFD;
+}
+
+/* App Store Icons */
+.app-links img {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* --- Payment & Checkout Section Fix --- */
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.pay-card {
+    border: 1px solid #E3E8EE;
+    border-radius: 4px;
+    padding: 4px;
+    width: 40px;
+    height: 25px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pay-card img {
+    max-width: 100%;
+}
+/* --- Header & Search Bar --- */
+.main-header {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.search-box {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    border: 2px solid var(--primary-blue);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.search-box select {
+    border: none;
+    border-left: 1px solid var(--border-gray);
+    padding: 0 10px;
+    outline: none;
+}
+
+.search-box button {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- User Controls --- */
+.user-controls {
+    display: flex;
+    gap: 20px;
+}
+
+.control-node {
+    text-align: center;
+    color: var(--text-gray);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.control-node i {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.control-node.active {
+    color: var(--primary-blue);
+}
+
+/* --- Cart Content Layout --- */
+.cart-page h2 {
+    margin: 30px 0;
+    font-size: 24px;
+}
+
+.cart-layout {
+    display: grid;
+    --primary-blue: #0D6EFD;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+}
+
+/* Left Section Items */
+.cart-card {
+    background: white;
+    --primary-blue: #0D6EFD;
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.item-details {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.item-details:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.item-details img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.info { flex: 1; }
+
+.info h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.info p {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin: 2px 0;
+}
+
+.item-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.remove-btn, .save-btn-simple {
+    padding: 7px 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border-gray);
+    background: white;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+}
+/* --- Brand Logo Styling --- */
+/* --- Header Logo Adjustment --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Icon aur Text ke beech gap */
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 150px; /* Logo ko space dene ke liye */
+}
+
+.logo-icon {
+    background-color: #0D6EFD;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0D6EFD;
+    line-height: 1; /* Text ko icon ke sath center karne ke liye */
+    margin: 0;
+}
+
+.brand-logo-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Icon aur Text ke beech ka perfect gap */
+    padding: 5px;
+}
+
+.logo-box {
+    background-color: #0D6EFD; /* Vahi blue jo aapki pic mein hai */
+    color: #FFFFFF;
+    width: 38px;  /* Standard size */
+    height: 38px;
+    border-radius: 7px; /* Chota aur soft round corner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-box i {
+    font-size: 18px; /* Shopping bag ka size na zyada bada na chota */
+}
+
+.brand-name {
+    color: #0D6EFD;
+    font-size: 24px;   /* Bold aur readable size */
+    font-weight: 800;  /* Extra bold jaisa pic mein hai */
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.8px; /* Text ko thoda close kiya hai professional look ke liye */
+    line-height: 1;
+}
+
+/* --- Footer Logo Adjustment --- */
+.brand-col .logo {
+    margin-bottom: 15px; /* Footer description se gap */
+}
+
+.brand-col .logo i {
+    font-size: 24px;
+    color: #0D6EFD;
+}
+
+.brand-col .logo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0D6EFD;
+    margin-left: 8px;
+}
+
+/* --- Search Box Adjustment (Header Alignment) --- */
+.search-box {
+    display: flex;
+    flex: 1;
+    max-width: 550px;
+    height: 40px; /* Logo ki height se match karne ke liye */
+    border: 2px solid #0D6EFD;
+    border-radius: 8px;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0D6EFD; /* Brand Name Blue */
+    letter-spacing: -0.5px;
+}
+
+/* --- User Controls Hover Effect --- */
+.user-controls {
+    display: flex;
+    gap: 25px;
+}
+
+.control-node {
+    text-align: center;
+    color: #8B96A5; /* Default Gray */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth color change */
+    text-decoration: none;
+}
+
+/* Jab cursor upar jaye toh blue ho jaye */
+.control-node:hover {
+    color: #0D6EFD;
+}
+
+/* Icon size and spacing */
+.control-node i {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.control-node p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Active state for My Cart (Since we are on pg5) */
+.control-node.active {
+    color: #0D6EFD;
+}
+.remove-btn { color: #FA3434; }
+.save-btn-simple { color: var(--primary-blue); }
+
+.price-qty { text-align: right; }
+.price { font-weight: bold; font-size: 16px; display: block; }
+.qty-select { margin-top: 10px; padding: 8px; border: 1px solid var(--border-gray); border-radius: 6px; }
+
+/* --- Right Side Summary --- */
+.coupon-box, .summary-card {
+    background: white;
+    border: 1px solid var(--border-gray);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.summary-row.total {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: var(--green-success);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* --- Back & Remove All Buttons --- */
+.cart-footer-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-back {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-remove-all {
+    background: white;
+    border: 1px solid var(--border-gray);
+    color: var(--primary-blue);
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* --- Right Side: Summary & Coupon --- */
+.cart-summary {
+    flex: 1;
+}
+
+.coupon-box, .summary-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.coupon-box p { margin-bottom: 10px; color: #505050; }
+
+.input-group {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.input-group input {
+    border: none;
+    padding: 10px;
+    width: 70%;
+}
+
+.input-group button {
+    width: 30%;
+    border: none;
+    border-left: 1px solid var(--border-color);
+    background: #fff;
+    color: var(--primary-blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.summary-row.total {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.red { color: #FA3434; }
+.green { color: #00B517; }
+
+.checkout-btn {
+    width: 100%;
+    background: var(--green-btn);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Payment Methods Container */
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Icons ke darmiyan gap */
+    margin-top: 15px;
+}
+
+/* Individual Icon Box (Figma style) */
+.pay-card {
+    background: #FFFFFF;
+    border: 1px solid #E3E8EE; /* Light gray border jaisa image mein hai */
+    border-radius: 4px;
+    width: 45px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.pay-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Header Hover Reminder (User ki request ke mutabiq) */
+.control-node:hover, .control-node:hover i {
+    color: #0D6EFD !important;
+}
+
+.logo-text, .logo-icon {
+    color: #0D6EFD; /* Brand logo blue */
+}
+
+/* --- Saved For Later Section --- */
+/* Saved Section Container */
+.saved-section {
+    background: #fff;
+    border: 1px solid #E3E8EE;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.saved-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1C1C1C;
+}
+
+/* Grid for 4 items */
+.saved-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Individual Item Box */
+.saved-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grey Image Background (Exact as Pic) */
+.saved-img-container {
+    background-color: #EEEEEE; /* Light grey background */
+    border-radius: 6px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.saved-img-container img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Price & Text */
+.saved-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1C1C1C;
+    margin-bottom: 5px;
+}
+
+.saved-name {
+    font-size: 14px;
+    color: #8B96A5;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    height: 40px; /* Fixed height for alignment */
+    overflow: hidden;
+}
+
+/* Move to Cart Button (Blue Border & Icon) */
+.btn-move-cart {
+    background: #fff;
+    color: #0D6EFD;
+    border: 1px solid #E3E8EE;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content; /* Pic mein button chota hai */
+    transition: 0.3s;
+}
+
+.btn-move-cart i {
+    font-size: 16px;
+}
+
+.btn-move-cart:hover {
+    background-color: #f0f6ff;
+    border-color: #0D6EFD;
+}
+.img-wrap {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.saved-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.saved-name {
+    font-size: 14px;
+    color: var(--gray-text);
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.move-cart-btn {
+    width: 100%;
+    background: #fff;
+    color: var(--primary-blue);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* --- Badges --- */
+.trust-badges {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.badge i {
+    font-size: 24px;
+    background: #E3E8EE;
+    color: var(--gray-text);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.badge strong { font-size: 14px; }
+.badge p { font-size: 12px; color: var(--gray-text); }
+
+/* Promo Banner Blue Container */
+.promo-banner-blue {
+    background: linear-gradient(90deg, #237CFF 0%, #005ADE 100%); /* Exact blue gradient */
+    color: #ffffff;
+    padding: 28px 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    border: none;
+}
+
+.promo-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.promo-content p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Orange Shop Now Button - Exact Formatting */
+.btn-orange {
+    background-color: #FF9017; /* Bright Orange */
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    white-space: nowrap; /* Button text wrap na ho */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover Effect */
+.btn-orange:hover {
+    background-color: #e58115; /* Thoda dark orange on hover */
+}
+
+/* Responsive adjust for small screens */
+@media (max-width: 600px) {
+    .promo-banner-blue {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+.newsletter {
+    background: #EFF2F4;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.news-form {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.input-with-icon {
+    background: #fff;
+    border: 1px solid #E3E8EE;
+    border-radius: 6px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+}
+
+.news-form button {
+    background: #0D6EFD;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Footer */
+.main-footer {
+    background: #fff;
+    padding: 40px 5%;
+    border-top: 1px solid #E3E8EE;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.2fr;
+    gap: 30px;
+}
+
+.footer-links h4 { margin-bottom: 20px; font-size: 16px; }
+.footer-links p { color: #8B96A5; font-size: 14px; margin-bottom: 10px; }
+
+.social-icons { display: flex; gap: 10px; margin-top: 15px; }
+.social-icons i {
+    background: #BDC4CD;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Footer Links Hover */
+.footer-links p:hover {
+    color: #0D6EFD;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+/* Footer Social Icons Hover */
+.social-icons i:hover {
+    background: #0D6EFD;
+    color: #fff;
+    transform: translateY(-3px); /* Chota sa bounce effect */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Footer Brand Logo Hover */
+.brand-col .logo:hover span {
+    color: #0D6EFD;
+    transition: 0.3s;
+}

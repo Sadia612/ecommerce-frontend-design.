@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand - Full Mobile Page</title>
+    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Alignment Fixes */
+        .outdoor-grid, .mid-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: #fff;
+            border: 1px solid #E0E7EE;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .outdoor-item, .big-card {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+            border-right: 1px solid #E0E7EE;
+            background: #fff;
+            min-height: 100px;
+        }
+
+        .outdoor-item:last-child, .big-card:last-child {
+            border-right: none;
+        }
+
+        .text-content, .card-info {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .text-content p, .card-info p {
+            font-size: 13px;
+            font-weight: 500;
+            color: #1C1C1C;
+            margin: 0;
+        }
+
+        .text-content span, .card-info span {
+            font-size: 11px;
+            color: #8B96A5;
+            margin-top: 4px;
+        }
+
+        .outdoor-item img, .big-card img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            align-self: flex-end;
+        }
+
+        .section-heading, .section-title {
+            padding-left: 5px;
+            font-size: 18px;
+            margin: 15px 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container"> 
+        <header class="mobile-nav">
+            <div class="top-row">
+                <div class="left-group">
+                    <i class="fas fa-bars"></i>
+                    <div class="logo">
+                        <div class="logo-box"><i class="fas fa-shopping-bag"></i></div>
+                        <span class="logo-text">Brand</span>
+                    </div>
+                </div>
+                <div class="right-group">
+                    <i class="fas fa-shopping-cart" onclick="location.href='pg5.html'"></i>
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="tabs-scroll">
+                <span class="tab active">All category</span>
+                <span class="tab">Gadgets</span>
+                <span class="tab">Clothes</span>
+                <span class="tab">Accessories</span>
+            </div>
+        </header>
+
+        <section class="trending-banner">
+            <div class="banner-content">
+                <p class="banner-subtext">Latest trending</p>
+                <h2 class="banner-title">Electronic items</h2>
+                <button class="learn-more-btn">Learn more</button>
+            </div>
+        </section>
+
+        <section class="home-outdoor">
+            <h3 class="section-heading">Home and outdoor</h3>
+            <div class="outdoor-grid">
+                <div class="outdoor-item">
+                    <div class="text-content">
+                        <p>Smart watches</p>
+                        <span>From USD 19</span>
+                    </div>
+                    <img src="assests/interior/7.png" alt="Watch">
+                </div>
+                <div class="outdoor-item">
+                    <div class="text-content">
+                        <p>Smart watches</p>
+                        <span>From USD 19</span>
+                    </div>
+                    <img src="assests/tech/8.jpg" alt="Watch">
+                </div>
+                <div class="outdoor-item">
+                    <div class="text-content">
+                        <p>Smart watches</p>
+                        <span>From USD 19</span>
+                    </div>
+                    <img src="assests/tech/4.jpg" alt="Watch">
+                </div>
+            </div>
+            <a href="#" class="source-link">Source now <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <section class="content-section">
+            <h3 class="section-title">Consumer electronics</h3>
+            <div class="mid-grid">
+                <div class="big-card">
+                    <div class="card-info">
+                        <p>Smart watches</p>
+                        <span>from USD 19</span>
+                    </div>
+                    <img src="assests/tech/4.jpg" alt="Watch">
+                </div>
+                <div class="big-card">
+                    <div class="card-info">
+                        <p>Tablets</p>
+                        <span>from USD 19</span>
+                    </div>
+                    <img src="assests/tech/2.jpg" alt="Tablet">
+                </div>
+                <div class="big-card">
+                    <div class="card-info">
+                        <p>Phones</p>
+                        <span>from USD 19</span>
+                    </div>
+                    <img src="assests/tech/1.jpg" alt="Phone">
+                </div>
+            </div>
+            <a href="pg7.html" class="source-link">Source now <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <section class="blue-request-banner">
+            <div class="blue-banner-content">
+                <p>An easy way to send requests to all suppliers</p>
+                <button class="send-inquiry-btn">Send inquiry</button>
+            </div>
+        </section>
+
+        <section class="recommended-section">
+            <h3 class="section-title">Recommended items</h3>
+            <div class="recommended-grid">
+                <div class="recom-card">
+                    <div class="img-box"><img src="assests/cloth/7.jpg" alt="T-shirt"></div>
+                    <div class="recom-info">
+                        <p class="price">$10.30</p>
+                        <p class="desc">T-shirts with multiple colors</p>
+                    </div>
+                </div>
+                <div class="recom-card">
+                    <div class="img-box"><img src="assests/tech/9.jpg" alt="Headphones"></div>
+                    <div class="recom-info">
+                        <p class="price">$10.30</p>
+                        <p class="desc">Wireless gaming headset</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
